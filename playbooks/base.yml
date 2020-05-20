@@ -1,0 +1,11 @@
+---
+# base.yml
+- name: "Provision Image"
+  hosts: default
+  become: true
+
+  tasks:
+  - name: Java install
+    package:
+      name: java-1.8.0-openjdk
+      state: present

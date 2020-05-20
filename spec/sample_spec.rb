@@ -27,3 +27,6 @@ end
 describe package('java-1.8.0-openjdk'), :if => ['redhat', 'centos'].include?(os[:family]) do
   it { should be_installed }
 end
+describe user('vagrant') do
+  it { should exist }
+end

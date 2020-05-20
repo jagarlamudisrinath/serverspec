@@ -21,7 +21,7 @@ options = Net::SSH::Config.for(host)
 options[:user] ||= Etc.getlogin
 
 set :host,        options[:host_name] || host
-set :ssh_options, :user => 'vagrant'
+set :ssh_options, :user => ENV["user"], :keys => ENV["keys"]
 
 # Disable sudo
 # set :disable_sudo, true
